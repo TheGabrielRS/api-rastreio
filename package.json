@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm index.js",
-    "test": ""
+    "test": "jest --watchAll"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +13,8 @@
     "express": "^4.17.1",
     "jest": "^26.6.1",
     "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "supertest": "^6.0.0"
   }
 }

@@ -18,7 +18,7 @@ var atualizarStatusEncomenda = require('./routes/atualizarStatusEncomenda');
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('Hello App');
 })
 
 app.get('/encomenda/:codigo', (req, res) => {
@@ -41,6 +41,8 @@ app.post('/encomenda/status/:codigo/:status', (req, res) => {
     atualizarStatusEncomenda({codigo: codigo, status: status}, res);
 })
 
-app.listen(3000, () => {
+const server = app.listen(3000, () => {
     console.log('Aplicação rodando na porta 3000');
 });
+
+module.exports = server;
